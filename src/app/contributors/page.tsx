@@ -14,7 +14,7 @@ const getContributors = async () => {
         const articlesFilePath = path.join(process.cwd(), 'data', 'json', 'articles.json');
         const articlesJson = JSON.parse(await fs.readFile(articlesFilePath, 'utf8'));
 
-        const authorIds = Array.from(new Map(articlesJson.map((item: any) => [item.authorId, item])).values());
+        const authorIds = Array.from(new Map(articlesJson.map((item: any) => [item.authorId, item.authorId])).values());
 
         const idAccountMap = await localeQueryAccountsMap('id');
         const allContributors = authorIds.map((authorId: any) => {
