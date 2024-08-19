@@ -33,6 +33,18 @@ async function fetchAccountsAndJsonFile() {
     return {accounts, accountsJsonFile}
 }
 
+export async function remoteQueryAccountByGithubNo(github_no:string):Promise<Account|null>{
+    try {
+        const {accounts} = await fetchAccountsAndJsonFile()
+        return accounts.filter((account: any) => {
+            return account.github_no == github_no
+        })[0]
+    } catch (error) {
+        console.error('Error fetching accounts from GitHub:', error);
+        throw error;
+    }
+}
+
 export async function remoteQueryAccountByGithubPage(github_page: string): Promise<Account | null> {
     try {
         const {accounts} = await fetchAccountsAndJsonFile()
@@ -85,6 +97,14 @@ export async function localQueryAccountByGithubNo(github_no: string): Promise<Ac
         console.error('Error fetching account from local:', error);
         throw error;
     }
+}
+
+export async function localQueryAccountByGithubAvatar(avatar?: string | null | undefined): Promise<Account | null> {
+    if (!avatar) return null
+    const match = avatar.match(/\/u\/(\d+)\?/);
+    if (!match) return null;
+    const githubNo = match[1];
+    return await localQueryAccountByGithubNo(githubNo)
 }
 
 export async function localQueryAccountByGithubPage(github_page?: string | null): Promise<Account | null> {
