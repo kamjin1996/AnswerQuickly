@@ -6,7 +6,7 @@ description: >-
 authorId: 70e12655-a130-46ea-b67a-5ccfcd95d040
 authorName: iwishfulDev
 date: '2024-08-19T06:12:24.606Z'
-lastModified: '2024-08-19T08:07:29.434Z'
+lastModified: '2024-08-19T08:15:05.313Z'
 ---
 # How to Push Code to a Specific GitHub Branch
 
