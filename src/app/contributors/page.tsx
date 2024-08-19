@@ -55,7 +55,7 @@ export default async function Contributors() {
 
             <ContributorList contributors={allContributors} showMoreLink={false}/>
 
-            <div className='mt-40 text-center font-sans text-xl'>
+            <div className='mt-40 text-gray-700 text-center font-sans text-xl'>
                 <h1>If you have an article or tutorial, you can join us directly, submit resources or articles, and join
                     the
                     open source contribution!</h1>
