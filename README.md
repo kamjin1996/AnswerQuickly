@@ -49,7 +49,7 @@ This codebase is a fork from the original amazing work by qiayue The wonderful M
 
 ## License
 
-Answer Quickly also follows the [MIT license](link-to-license) like GitBase.
+Answer Quickly also follows the [MIT license](LICENCE) like GitBase.
 
 ## Support
 
