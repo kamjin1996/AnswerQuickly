@@ -12,21 +12,12 @@ This project is a fork of GitBase, with several enhanced features for a more int
 * **Open Contributions**: Any user can contribute to the repository by logging in with their GitHub account.
 * **Contributor Recognition**: Contributors who submit articles or resources are highlighted, along with their contribution history.
 * **User-Friendly Interface**: Designed for intuitive and quick operations, making it easy for anyone to navigate and participate.
-* **GitHub API Driven**: Entirely powered by the GitHub API, ensuring a free and uninterrupted experience. Users can submit content but cannot edit or delete others' submissions.
+* **GitHub API Driven**: Entirely powered by the GitHub API, ensuring a free and uninterrupted experience. Users can do including but not limited to submit, edit, delete, etc, But cannot edit or delete others' submissions.
 * **Fast Search**: Quickly find the resources or content you need with a powerful search function.
 * **Tagging and Categorization (In Development)**: Supports tagging and categorizing articles for better organization and discovery.
 * **Interactive Features (In Development)**: Comment, like, and favorite resources to engage with the community.
 * **Resource Ranking**: Vote on and rank great resources and articles, showcasing the best content to the community.
-* **Additional Information**: For more details, visit [GitBase](https://github.com/qiayue/gitbase).
-
-## Prerequisites
-
-- Node.js (version 14 or later)
-- npm (comes with Node.js)
-- Git
-- GitHub account
-- Vercel account (for deployment)
-
+* **Additional Information**: For more base details, visit [GitBase](https://github.com/qiayue/gitbase).
 
 ## Usage
 
@@ -49,7 +40,7 @@ This codebase is a fork from the original amazing work by qiayue The wonderful M
 
 ## License
 
-Answer Quickly also follows the [MIT license](LICENCE) like GitBase.
+Answer Quickly also follows the [MIT license](LICENCE) like [GitBase](https://github.com/qiayue/gitbase).
 
 ## Support
 
