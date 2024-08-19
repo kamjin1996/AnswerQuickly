@@ -25,7 +25,7 @@ This project is a fork of [GitBase](https://github.com/qiayue/gitbase), with sev
 
 ## Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkamjin1996%2Fanswer-quickly&project-name=AnswerQuickly&repository-name=answer-quickly&external-id=https%3A%2F%2Fgithub.com%2Fkamjin1996%2Fanswer-quickly%2Ftree%2Fmain)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fkamjin1996%2FAnswerQuickly&project-name=AnswerQuickly&repository-name=AnswerQuickly&external-id=https%3A%2F%2Fgithub.com%2Fkamjin1996%2FAnswerQuickly%2Ftree%2Fmain)
 
 
 ## Contributing

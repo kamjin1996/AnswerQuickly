@@ -45,7 +45,7 @@ export function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/kamjin1996/answer-quickly" target="_blank"
+                                <a href="https://github.com/kamjin1996/AnswerQuickly" target="_blank"
                                    className="text-base text-gray-500 hover:text-gray-900">
                                     GitHub
                                 </a>

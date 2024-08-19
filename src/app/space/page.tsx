@@ -10,7 +10,7 @@ export default function Space({searchParams}: { searchParams: any | null | undef
     const articles = getSortedPostsData(searchParams.author_id);
     const authorName = searchParams.author_name || 'Unknown Author';
     const authorAvatar = searchParams.author_avatar || '/default-avatar.png';
-    const authorGithubPage = searchParams.author_github || 'https://github.com/kamjin1996/answer-quickly';
+    const authorGithubPage = searchParams.author_github || 'https://github.com/kamjin1996/AnswerQuickly';
 
     return (
         <div className="container mx-auto py-12">
