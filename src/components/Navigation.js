@@ -86,7 +86,7 @@ export function Navigation() {
                     </Link>
                     {isLoggedIn ? (
                         <>
-                            <Link href={`https://github.com/${accountInfo.github_page}`}>
+                            <Link href={accountInfo.github_page}>
                                 <Avatar src={accountInfo.avatar} alt={accountInfo.name}
                                         size={36}></Avatar>
                             </Link>
