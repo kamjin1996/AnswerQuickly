@@ -14,16 +14,16 @@
     "date": "2024-08-19T06:18:36.550Z",
     "authorId": "70e12655-a130-46ea-b67a-5ccfcd95d040",
     "authorName": "iwishfulDev",
-    "lastModified": "2024-08-19T06:18:37Z",
+    "lastModified": "2024-08-19T08:11:00Z",
     "path": "data/md/how-to-debug-javascript-projects.md"
   },
   {
-    "title": "如何将代码推送到指定的 GitHub 分支",
-    "description": "在本教程中，我们将介绍如何将本地代码推送到 GitHub 上的指定分支。这包括创建新分支、切换分支、以及推送代码到远程分支的步骤。",
+    "title": "How to Push Code to a Specific GitHub Branch",
+    "description": "In this tutorial, we'll walk you through how to push your local code to a specific branch on GitHub.",
     "date": "2024-08-19T06:12:24.606Z",
     "authorId": "70e12655-a130-46ea-b67a-5ccfcd95d040",
     "authorName": "iwishfulDev",
-    "lastModified": "2024-08-19T06:12:25Z",
+    "lastModified": "2024-08-19T08:15:06Z",
     "path": "data/md/如何将代码推送到指定的-github-分支.md"
   }
 ]
