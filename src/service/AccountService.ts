@@ -51,7 +51,7 @@ export const preload = (key: 'id') => {
     void localeQueryAccountsMap(key)
 }
 
-export async function localeQueryAccountsMap(key: 'id' | 'github_page'| 'github_no'): Promise<Map<string, Account>> {
+export async function localeQueryAccountsMap(key: 'id' | 'github_page' | 'github_no'): Promise<Map<string, Account>> {
     if (idAccountMap.size > 0) {
         return idAccountMap
     } else {
@@ -64,7 +64,7 @@ export async function localeQueryAccountsMap(key: 'id' | 'github_page'| 'github_
                     map.set(obj.github_page, obj);
                     break
                 case 'github_no':
-                    map.set(obj.github_no,obj)
+                    map.set(obj.github_no, obj)
                 case "id":
                 default:
                     map.set(obj.id, obj);
@@ -104,10 +104,10 @@ export async function remoteAddOrUpdateAccount(account: Account) {
         const {accountsJsonFile, accounts} = await fetchAccountsAndJsonFile();
 
         // Remove duplicate accounts
-        const newAccounts = [...accounts].reduce((map, item) => {
-            map.set(item.github_page, item);
-            return map;
-        }, new Map<number, Account>()).values();
+        const newAccounts = Object.values(accounts.reduce((acc: any, obj: any) => {
+            acc[obj.github_page] = obj;
+            return acc;
+        }, {}))
 
         const index = newAccounts.findIndex((obj: any) => obj.id === account.id);
         if (index !== -1) {

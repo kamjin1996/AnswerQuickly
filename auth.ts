@@ -76,11 +76,11 @@ export const {handlers, signIn, signOut, auth} = NextAuth({
                         console.log("Add Account:", html_url)
                         const accountForm = {
                             id: uuidv4(),
-                            name: profile?.name,
+                            name: profile?.login,
                             avatar: profile?.avatar_url,
                             registered_at: new Date().getTime(),
                             github_page: profile?.html_url,
-                            github_no: profile?.id
+                            github_no: String(profile?.id)
                         } as Account
                         await remoteAddOrUpdateAccount(accountForm)
                     }
