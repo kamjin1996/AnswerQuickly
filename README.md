@@ -7,7 +7,7 @@ providing every user with the convenience of finding resources.
 
 ## Features
 
-This project is a fork of GitBase, with several enhanced features for a more interactive and user-friendly experience:
+This project is a fork of [GitBase](https://github.com/qiayue/gitbase), with several enhanced features for a more interactive and user-friendly experience:
 
 * **Open Contributions**: Any user can contribute to the repository by logging in with their GitHub account.
 * **Contributor Recognition**: Contributors who submit articles or resources are highlighted, along with their contribution history.
@@ -17,7 +17,7 @@ This project is a fork of GitBase, with several enhanced features for a more int
 * **Tagging and Categorization (In Development)**: Supports tagging and categorizing articles for better organization and discovery.
 * **Interactive Features (In Development)**: Comment, like, and favorite resources to engage with the community.
 * **Resource Ranking**: Vote on and rank great resources and articles, showcasing the best content to the community.
-* **Additional Information**: For more base details, visit [GitBase](https://github.com/qiayue/gitbase).
+* **Additional Information**: For more base details, visit GitBase.
 
 ## Usage
 
@@ -40,7 +40,7 @@ This codebase is a fork from the original amazing work by qiayue The wonderful M
 
 ## License
 
-Answer Quickly also follows the [MIT license](LICENCE) like [GitBase](https://github.com/qiayue/gitbase).
+Answer Quickly also follows the [MIT license](LICENCE) like GitBase.
 
 ## Support
 
