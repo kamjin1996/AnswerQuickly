@@ -64,35 +64,31 @@ export default function AdminArticlesPage() {
 
     const handleDelete = async (e, article) => {
         e.preventDefault()
-        if (accountInfo.id === article.authorId) {
-            if (!confirm(`Will delete: ${article.title}, confirm?`)) {
-                return
-            }
-            try {
-                const response = await fetch('/api/articles/delete', {
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify(article),
-                });
 
-                if (!response.ok) {
-                    const data = await response.json();
-                    throw new Error(data.error || 'Failed to delete article');
-                }
-
-                setArticles(articles.filter((item) => {
-                    return item.path !== article.path
-                }))
-            } catch (error) {
-                console.error('Error creating article:', error);
-                setError(error.message);
-            } finally {
-                setIsLoading(false);
-            }
-        } else {
-            alert("Can't edit someone else's post! Contact the administrator or author.")
+        if (!confirm(`Will delete: ${article.title}, confirm?`)) {
+            return
         }
+        try {
+            const response = await fetch('/api/articles/delete', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(article),
+            });
 
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || 'Failed to delete article');
+            }
+
+            setArticles(articles.filter((item) => {
+                return item.path !== article.path
+            }))
+        } catch (error) {
+            console.error('Error creating article:', error);
+            setError(error.message);
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     const handleEdit = async (e, article) => {

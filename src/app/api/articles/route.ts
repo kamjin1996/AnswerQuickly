@@ -1,5 +1,5 @@
 import {NextResponse} from 'next/server';
-import {updateMdFile, syncData, fetchArticles} from "./dataHandler";
+import {updateMdFile, syncData, fetchArticles, getArticle} from "./dataHandler";
 import {getSessionAccountOrNull} from "../../../utils/sessionUtil";
 import path2 from "path";
 import fs from "fs";
@@ -18,10 +18,12 @@ export async function GET(request: Request) {
             return fs.existsSync(articleFilePath) ? 'Published' : 'Syncing'
         }
 
-        result = result.map((item: any) => {
-            item.status = obtainStatus(item.path);
-            return item
-        })
+        if (Array.isArray(result)) {
+            result = result.map((item: any) => {
+                item.status = obtainStatus(item.path);
+                return item
+            })
+        }
 
         return NextResponse.json(result);
     } catch (error) {
@@ -37,6 +39,10 @@ export async function POST(request: Request) {
         const account = await getSessionAccountOrNull()
         if (!account) {
             return NextResponse.json({message: 'Unauthorized.'}, {status: 401})
+        }
+
+        if (article.authorId && account.id !== article.authorId) {
+            return NextResponse.json({error: 'Can\'t edit someone else\'s post! Contact the administrator or author.'}, {status: 406});
         }
 
         // Update the MD file
