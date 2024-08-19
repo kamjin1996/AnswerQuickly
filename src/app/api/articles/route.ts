@@ -1,6 +1,8 @@
 import {NextResponse} from 'next/server';
 import {updateMdFile, syncData, fetchArticles} from "./dataHandler";
 import {getSessionAccountOrNull} from "../../../utils/sessionUtil";
+import path2 from "path";
+import fs from "fs";
 
 export async function GET(request: Request) {
     const {searchParams} = new URL(request.url);
@@ -8,7 +10,19 @@ export async function GET(request: Request) {
     const path = searchParams.get('path');
 
     try {
-        const result = await fetchArticles(path, sync)
+        let result = await fetchArticles(path, sync)
+
+        const obtainStatus = (file_path: string) => {
+            //check the local file is on system?
+            const articleFilePath = path2.join(process.cwd(), file_path);
+            return fs.existsSync(articleFilePath) ? 'Published' : 'Syncing'
+        }
+
+        result = result.map((item: any) => {
+            item.status = obtainStatus(item.path);
+            return item
+        })
+
         return NextResponse.json(result);
     } catch (error) {
         console.error('Error fetching articles:', error);

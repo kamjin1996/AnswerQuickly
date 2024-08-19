@@ -124,6 +124,7 @@ export default function AdminArticlesPage() {
                         <TableHead>Title</TableHead>
                         <TableHead>Description</TableHead>
                         <TableHead>Created</TableHead>
+                        <TableHead>Status</TableHead>
                         <TableHead>Created By</TableHead>
                         <TableHead>Last Modified</TableHead>
                         <TableHead>Actions</TableHead>
@@ -135,6 +136,7 @@ export default function AdminArticlesPage() {
                             <TableCell>{article.title}</TableCell>
                             <TableCell>{article.description}</TableCell>
                             <TableCell>{new Date(article.date).toLocaleDateString()}</TableCell>
+                            <TableCell>{article.status}</TableCell>
                             <TableCell>{article.authorName}</TableCell>
                             <TableCell>{new Date(article.lastModified).toLocaleString()}</TableCell>
                             <TableCell>
