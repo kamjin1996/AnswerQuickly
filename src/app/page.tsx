@@ -24,8 +24,10 @@ const Data = async () => {
 
     const idAccountMap = await localeQueryAccountsMap('id')
 
-    const allContributors = articlesJson.map((article: any) => {
-        const account = idAccountMap.get(article.authorId)
+    const authorIds = Array.from(new Map(articlesJson.map((item:any) => [item.authorId, item])).values());
+
+    const allContributors = authorIds.map((authorId: any) => {
+        const account = idAccountMap.get(authorId)
         if (account) {
             return {
                 authorId: account.id,
