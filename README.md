@@ -36,7 +36,7 @@ There are two types of contribution content:
 
 ## Thanks
 
-This codebase is a fork from the original amazing work by qiayue The wonderful MoonRide who also maintains an amazing fork! The codebase starts from an GitBase. (And they use MIT license.)
+This codebase is a fork from the original amazing work by qiayue's [GitBase](https://github.com/qiayue/gitbase), The wonderful qiayue who also maintains an amazing repo! The codebase starts from an GitBase. (And they use MIT license.)
 
 ## License
 
