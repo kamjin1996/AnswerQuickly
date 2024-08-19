@@ -2,7 +2,7 @@ import {getPostData} from '@/lib/posts';
 import Link from 'next/link';
 import {ArrowLeft, ChevronRight} from 'lucide-react';
 
-export async function generateMetadata({params}) {
+export async function generateMetadata({params}: { params: { slug: string } }) {
     const postData = await getPostData(params.slug);
     return {
         title: `${postData.title}`,
@@ -10,7 +10,7 @@ export async function generateMetadata({params}) {
     };
 }
 
-export default async function Post({params}) {
+export default async function Post({params}:{ params: { slug: string } }) {
     const postData = await getPostData(params.slug);
 
     return (
