@@ -3,9 +3,18 @@
     "title": "Gpt Answer - The SEO Search Demand And Solution(CN)",
     "description": "GPT问答之-关于对seo搜索需求的理解和解决方案分析讨论",
     "date": "2024-08-13T03:53:04.211Z",
-    "lastModified": "2024-08-16T01:53:44Z",
-    "path": "data/md/gpt-answer-the-seo-search-demand-and-solution-cn.md",
     "authorId": "819220af-11c7-4eb9-a4cc-90b06bab52c1",
-    "authorName": "kamjin1996"
+    "authorName": "kamjin1996",
+    "lastModified": "2024-08-19T04:22:47Z",
+    "path": "data/md/gpt-answer-the-seo-search-demand-and-solution-cn.md"
+  },
+  {
+    "title": "如何将代码推送到指定的 GitHub 分支",
+    "description": "在本教程中，我们将介绍如何将本地代码推送到 GitHub 上的指定分支。这包括创建新分支、切换分支、以及推送代码到远程分支的步骤。",
+    "date": "2024-08-19T06:12:24.606Z",
+    "authorId": "70e12655-a130-46ea-b67a-5ccfcd95d040",
+    "authorName": "iwishfulDev",
+    "lastModified": "2024-08-19T06:12:25Z",
+    "path": "data/md/如何将代码推送到指定的-github-分支.md"
   }
 ]
