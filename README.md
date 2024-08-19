@@ -21,7 +21,7 @@ This project is a fork of GitBase, with several enhanced features for a more int
 
 ## Usage
 
-- Open [Answer Quickly](https://answer-quickly.vercel.app/) directly to complete any of your actions, including contributions.
+- Open [Answer Quickly](https://answer-quickly.vercel.app/) directly to complete any of your actions, including contributions. You can log in via github.
 
 ## Deploy on Vercel
 
