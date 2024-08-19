@@ -6,6 +6,7 @@ description: >-
 authorId: 70e12655-a130-46ea-b67a-5ccfcd95d040
 authorName: iwishfulDev
 date: '2024-08-19T06:18:36.550Z'
+lastModified: '2024-08-19T08:10:59.129Z'
 ---
 Here’s a tutorial in English on how to debug JavaScript projects using both VSCode and WebStorm:
 
