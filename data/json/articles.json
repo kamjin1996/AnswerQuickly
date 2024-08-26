@@ -36,6 +36,15 @@
     "path": "data/md/how-to-debug-javascript-projects.md"
   },
   {
+    "title": "List of Next.js and Tailwind CSS component libraries (2024)",
+    "description": "List of Next.js and Tailwind CSS component libraries, Developers can quickly reference and copy.",
+    "date": "2024-08-26T04:18:13.000Z",
+    "authorId": "819220af-11c7-4eb9-a4cc-90b06bab52c1",
+    "authorName": "Kamjin",
+    "lastModified": "2024-08-26T04:18:13Z",
+    "path": "data/md/list-of-next-js-and-tailwind-css-component-librari.md"
+  },
+  {
     "title": "How to Push Code to a Specific GitHub Branch",
     "description": "In this tutorial, we'll walk you through how to push your local code to a specific branch on GitHub.",
     "date": "2024-08-19T06:12:24.606Z",
