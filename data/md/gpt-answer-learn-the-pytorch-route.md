@@ -4,6 +4,7 @@ description: Learn the necessary methods and routes for pytorch.
 authorId: 819220af-11c7-4eb9-a4cc-90b06bab52c1
 authorName: Kamjin
 date: '2024-08-26T03:02:47.080Z'
+lastModified: '2024-08-26T03:06:43.425Z'
 ---
 YOU:
 
@@ -13,7 +14,7 @@ I want to learn the principles and usage of the pytorch platform to run models, 
 
 
 GPT:
-```
+
 # To get started with PyTorch and understand how to train your own LLM (Large Language Model), you should follow a structured learning path. Here’s how you can approach it:
 
 ## 1. Foundational Knowledge:
@@ -60,4 +61,4 @@ GPT:
    - **Documentation:** Regularly consult the PyTorch and Hugging Face documentation.
 
 By following this learning path, you'll build a strong foundation to understand how models work, how to use PyTorch effectively, and eventually how to train your own LLM.
-```
+
