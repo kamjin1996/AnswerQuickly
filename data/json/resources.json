@@ -28,5 +28,10 @@
     "name": "Woy.ai",
     "description": "AI Tools Directory",
     "url": "https://woy.ai"
+  },
+  {
+    "name": "Query Domains",
+    "description": "Quickly check whether the domain name is available.",
+    "url": "https://query.domains/"
   }
 ]
