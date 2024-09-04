@@ -68,9 +68,9 @@ export function Navigation() {
                 </div>
 
                 <div className='ml-4 w-80 flex space-x-1.5'><Input name="search" value={searchText}
-                                                                 onChange={(e) => {
-                                                                     setSearchText(e.target.value)
-                                                                 }}/>
+                                                                   onChange={(e) => {
+                                                                       setSearchText(e.target.value)
+                                                                   }}/>
                     <Button disabled={!searchText || searchText.length < 1} onClick={handleSearch}>Search</Button>
                 </div>
 
@@ -86,7 +86,7 @@ export function Navigation() {
                     </Link>
                     {isLoggedIn ? (
                         <>
-                            <Link href={accountInfo.github_page}>
+                            <Link href={accountInfo.github_page ? accountInfo.github_page : ""}>
                                 <Avatar src={accountInfo.avatar} alt={accountInfo.name}
                                         size={36}></Avatar>
                             </Link>

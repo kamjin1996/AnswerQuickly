@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Alert} from "@/components/ui/alert";
+import MDEditor from "@uiw/react-md-editor";
 
 export default function CreateArticlePage() {
     const [article, setArticle] = useState({title: '', description: '', content: '', slug: ''});
@@ -96,13 +97,27 @@ export default function CreateArticlePage() {
                     onChange={handleInputChange}
                     placeholder="Article Slug (e.g., my-new-article)"
                 />
-                <Textarea
-                    name="content"
-                    value={article.content}
-                    onChange={handleInputChange}
-                    placeholder="Article Content (Markdown)"
-                    rows={20}
-                />
+                <div className='flex'>
+                    <Textarea
+                        className='w-1/2'
+                        name="content"
+                        value={article.content}
+                        onChange={handleInputChange}
+                        placeholder="Article Content (Markdown)"
+                        rows={20}
+                    />
+                    <div>
+                        <div className="m-1 h-full min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-35 dark:via-neutral-400"></div>
+                    </div>
+
+                    <div className='border w-1/2'>
+                        <div className="container" data-color-mode="light">
+                            <MDEditor.Markdown source={article.content} />
+                        </div>
+                    </div>
+                </div>
+
+
                 <Button onClick={handleSave} disabled={isLoading}>
                     {isLoading ? 'Creating...' : 'Create Article'}
                 </Button>
