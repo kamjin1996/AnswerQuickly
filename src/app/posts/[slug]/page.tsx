@@ -2,6 +2,7 @@ import {getPostData} from '@/lib/posts';
 import Link from 'next/link';
 import {ArrowLeft, ChevronRight} from 'lucide-react';
 
+
 export async function generateMetadata({params}: { params: { slug: string } }) {
     const postData = await getPostData(params.slug);
     return {
@@ -10,9 +11,8 @@ export async function generateMetadata({params}: { params: { slug: string } }) {
     };
 }
 
-export default async function Post({params}:{ params: { slug: string } }) {
+export default async function Post({params}: { params: { slug: string } }) {
     const postData = await getPostData(params.slug);
-
     return (
         <article className="container mx-auto px-4 py-12 max-w-3xl">
             {/* Breadcrumb navigation */}
@@ -41,8 +41,10 @@ export default async function Post({params}:{ params: { slug: string } }) {
             {/* Article content */}
             <div
                 className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{__html: postData.contentHtml}}
-            />
+                dangerouslySetInnerHTML={{ __html: postData.mdHtmlText }}
+            >
+
+            </div>
 
             {/* Back to articles link */}
             <div className="mt-12">

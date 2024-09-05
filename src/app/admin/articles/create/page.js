@@ -21,6 +21,10 @@ export default function CreateArticlePage() {
         setArticle({...article, [name]: value});
     };
 
+    const handleMdTextChange = (mdText) => {
+        setArticle({...article, content: mdText});
+    }
+
     const handleSave = async () => {
         setIsLoading(true);
         setError(null);
@@ -98,25 +102,10 @@ export default function CreateArticlePage() {
                     placeholder="Article Slug (e.g., my-new-article)"
                 />
                 <div className='flex'>
-                    <Textarea
-                        className='w-1/2'
-                        name="content"
-                        value={article.content}
-                        onChange={handleInputChange}
-                        placeholder="Article Content (Markdown)"
-                        rows={20}
-                    />
-                    <div>
-                        <div className="m-1 h-full min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-35 dark:via-neutral-400"></div>
-                    </div>
-
-                    <div className='border w-1/2'>
-                        <div className="container" data-color-mode="light">
-                            <MDEditor.Markdown source={article.content} />
-                        </div>
-                    </div>
+                    <MDEditor data-color-mode="light" className={'w-full'} minHeight={96} height={"100%"}
+                              visibleDragbar={false}
+                              value={article.content} onChange={handleMdTextChange}/>
                 </div>
-
 
                 <Button onClick={handleSave} disabled={isLoading}>
                     {isLoading ? 'Creating...' : 'Create Article'}

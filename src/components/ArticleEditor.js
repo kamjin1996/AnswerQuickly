@@ -47,6 +47,10 @@ export default function ArticleEditor() {
         setArticle({...article, [name]: value});
     };
 
+    const handleMdTextChange = (mdText)=>{
+        setArticle({...article, content: mdText});
+    }
+
     const handleSave = async (e) => {
         e.preventDefault()
         setIsLoading(true)
@@ -86,24 +90,7 @@ export default function ArticleEditor() {
                 placeholder="Article Description"
             />
             <div className='flex'>
-                    <Textarea
-                        className={'w-1/2'}
-                        name="content"
-                        value={article.content}
-                        onChange={handleInputChange}
-                        placeholder="Article Content"
-                        rows={20}
-                    />
-
-                <div>
-                    <div className="m-1 h-full min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-35 dark:via-neutral-400"></div>
-                </div>
-
-                <div className='border w-1/2'>
-                    <div className="container" data-color-mode="light">
-                        <MDEditor.Markdown source={article.content} />
-                    </div>
-                </div>
+                <MDEditor data-color-mode="light" className={'w-full'} height={"100%"} visibleDragbar={false} value={article.content} onChange={handleMdTextChange} />
             </div>
             <Button onClick={handleSave} disabled={isLoading}>
                 {isLoading ? 'Handling...' : 'Save Article'}
